@@ -176,14 +176,14 @@ func addRange(class *unicode.RangeTable, raw_range string) error {
 			r16 := unicode.Range16{
 				Lo: uint16(start),
 				Hi: uint16(end),
-				// TODO: set Stride?
+				Stride: 1,
 			}
 			class.R16 = append(class.R16, r16)
 		default:
 			r32 := unicode.Range32{
 				Lo: uint32(start),
 				Hi: uint32(end),
-				// TODO: set Stride?
+				Stride: 1,
 			}
 			class.R32 = append(class.R32, r32)
 		}
@@ -201,14 +201,14 @@ func addRange(class *unicode.RangeTable, raw_range string) error {
 			r16 := unicode.Range16{
 				Lo: uint16(num),
 				Hi: uint16(num),
-				// TODO: set Stride?
+				Stride: 1,
 			}
 			class.R16 = append(class.R16, r16)
 		default:
 			r32 := unicode.Range32{
 				Lo: uint32(num),
 				Hi: uint32(num),
-				// TODO: set Stride?
+				Stride: 1,
 			}
 			class.R32 = append(class.R32, r32)
 		}
