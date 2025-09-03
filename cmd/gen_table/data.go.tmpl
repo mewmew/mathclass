@@ -1,0 +1,88 @@
+// Package mathclass provides the classification of Unicode characters based on
+// their use in mathematical notation.
+//
+// ref: https://www.unicode.org/reports/tr25/tr25-15.pdf
+// ref: https://www.unicode.org/Public/math/revision-15/MathClass-15.txt
+package mathclass
+
+import (
+	"unicode"
+)
+
+var (
+	// Normal - includes all digits and symbols requiring only one form
+	Normal = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Normal.R16 }},
+		R32: {{ printf "%#v" .Normal.R32 }},
+	}
+	// Alphabetic
+	Alphabetic = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Alphabetic.R16 }},
+		R32: {{ printf "%#v" .Alphabetic.R32 }},
+	}
+	// Binary
+	Binary = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Binary.R16 }},
+		R32: {{ printf "%#v" .Binary.R32 }},
+	}
+	// Closing - usually paired with opening delimiter
+	Closing = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Closing.R16 }},
+		R32: {{ printf "%#v" .Closing.R32 }},
+	}
+	// Diacritic
+	Diacritic = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Diacritic.R16 }},
+		R32: {{ printf "%#v" .Diacritic.R32 }},
+	}
+	// Fence - unpaired delimiter (often used as opening or closing)
+	Fence = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Fence.R16 }},
+		R32: {{ printf "%#v" .Fence.R32 }},
+	}
+	// Glyph_Part - piece of large operator
+	Glyph_Part = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Glyph_Part.R16 }},
+		R32: {{ printf "%#v" .Glyph_Part.R32 }},
+	}
+	// Large - n-ary or large operator, often takes limits
+	Large = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Large.R16 }},
+		R32: {{ printf "%#v" .Large.R32 }},
+	}
+	// Opening - usually paired with closing delimiter
+	Opening = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Opening.R16 }},
+		R32: {{ printf "%#v" .Opening.R32 }},
+	}
+	// Punctuation
+	Punctuation = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Punctuation.R16 }},
+		R32: {{ printf "%#v" .Punctuation.R32 }},
+	}
+	// Relation - includes arrows
+	Relation = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Relation.R16 }},
+		R32: {{ printf "%#v" .Relation.R32 }},
+	}
+	// Space
+	Space = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Space.R16 }},
+		R32: {{ printf "%#v" .Space.R32 }},
+	}
+	// Unary - operators that are only unary
+	Unary = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Unary.R16 }},
+		R32: {{ printf "%#v" .Unary.R32 }},
+	}
+	// Vary - operators that can be unary or binary depending on context
+	Vary = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Vary.R16 }},
+		R32: {{ printf "%#v" .Vary.R32 }},
+	}
+	// Special - characters not covered by other classes
+	Special = &unicode.RangeTable{
+		R16: {{ printf "%#v" .Special.R16 }},
+		R32: {{ printf "%#v" .Special.R32 }},
+	}
+)
